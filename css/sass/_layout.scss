@@ -12,6 +12,7 @@
   @include responsive() {
     flex-direction: column;
     height: auto;
+    overflow: none;
   }
 
   .container-item-1 {
