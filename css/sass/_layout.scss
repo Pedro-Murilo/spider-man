@@ -6,13 +6,12 @@
   flex-direction: row;
   align-items: center;
 
-  overflow: none;
+  overflow: hidden;
   height: 85vh;
 
   @include responsive() {
     flex-direction: column;
     height: auto;
-    overflow: hidden;
   }
 
   .container-item-1 {
@@ -37,7 +36,7 @@
 
 .spiderman {
   width: 120%;
-  transform: translate3d(-160px, 0, 0);
+  transform: translate3d(-150px, 0, 0);
 
   @include responsive() {
     width: 100%;
