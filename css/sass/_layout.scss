@@ -6,10 +6,99 @@
   flex-direction: row;
   align-items: center;
 
+  overflow: hidden;
+
   .container-item-1 {
     max-width: 576px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+.spiderman {
+  width: 120%;
+  transform: translate3d(-160px, 0, 0);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 3px;
+  transform: skewX(-10deg);
+  text-transform: uppercase;
+  background: linear-gradient(267.72deg, $red-light 0.88%, $red 100%);
+  position: relative;
+  transition: 0.7s ease;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 30%;
+    height: 70%;
+    border-radius: 3px;
+    border-top: 3px solid $white;
+    border-left: 3px solid $white;
+    opacity: 0;
+    transition: 0.7s ease;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 30%;
+    height: 70%;
+    border-radius: 3px;
+    border-bottom: 3px solid $white;
+    border-right: 3px solid $white;
+    opacity: 0;
+    transition: 0.7s ease;
+  }
+
+  &:hover {
+    transform: skewX(-10deg) scale(1.05);
+    &::after {
+      opacity: 1;
+    }
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 3px;
+  transform: skewX(-10deg);
+  text-transform: uppercase;
+  background: transparent;
+  position: relative;
+  transition: 0.7s ease;
+  border: 2px solid $red;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: -1;
+    width: 0%;
+    height: 104%;
+    background: linear-gradient(267.72deg, $red-light 0.88%, $red 100%);
+    transition: 0.7s ease;
+  }
+
+  &:hover {
+    &::after {
+      width: 102%;
+    }
   }
 }

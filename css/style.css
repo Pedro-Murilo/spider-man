@@ -49,6 +49,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .container .container-item-1 {
@@ -63,6 +64,102 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.spiderman {
+  width: 120%;
+  -webkit-transform: translate3d(-160px, 0, 0);
+          transform: translate3d(-160px, 0, 0);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 3px;
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+  text-transform: uppercase;
+  background: linear-gradient(267.72deg, #f02a2f 0.88%, #ea1d22 100%);
+  position: relative;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 30%;
+  height: 70%;
+  border-radius: 3px;
+  border-top: 3px solid #edf1f7;
+  border-left: 3px solid #edf1f7;
+  opacity: 0;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+}
+
+.btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 30%;
+  height: 70%;
+  border-radius: 3px;
+  border-bottom: 3px solid #edf1f7;
+  border-right: 3px solid #edf1f7;
+  opacity: 0;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+}
+
+.btn:hover {
+  -webkit-transform: skewX(-10deg) scale(1.05);
+          transform: skewX(-10deg) scale(1.05);
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 3px;
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+  text-transform: uppercase;
+  background: transparent;
+  position: relative;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  border: 2px solid #ea1d22;
+}
+
+.btn-secondary::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: -1;
+  width: 0%;
+  height: 104%;
+  background: linear-gradient(267.72deg, #f02a2f 0.88%, #ea1d22 100%);
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+}
+
+.btn-secondary:hover::after {
+  width: 102%;
 }
 
 header {
