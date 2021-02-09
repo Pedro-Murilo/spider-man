@@ -6,13 +6,13 @@
   flex-direction: row;
   align-items: center;
 
-  overflow: hidden;
+  overflow: none;
   height: 85vh;
 
   @include responsive() {
     flex-direction: column;
     height: auto;
-    overflow: none;
+    overflow: hidden;
   }
 
   .container-item-1 {
@@ -124,5 +124,35 @@
     &::after {
       width: 102%;
     }
+  }
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: linear-gradient(
+      110deg,
+      $blue-dark 10%,
+      rgba(11, 12, 16, 0.8) 50%,
+      $blue-dark 80%
+    );
   }
 }
