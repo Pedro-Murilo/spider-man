@@ -8,10 +8,11 @@
 }
 
 @import "sass/colors";
+@import "sass/spacing";
 
 body {
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: $blue-dark;
 
   .logo {
     max-width: 88px;

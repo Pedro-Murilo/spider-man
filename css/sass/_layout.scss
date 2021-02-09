@@ -16,6 +16,18 @@
   }
 }
 
+.flex {
+  display: flex;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.items-center {
+  align-items: center;
+}
+
 .spiderman {
   width: 120%;
   transform: translate3d(-160px, 0, 0);
