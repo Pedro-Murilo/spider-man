@@ -7,6 +7,12 @@
   align-items: center;
 
   overflow: hidden;
+  height: 85vh;
+
+  @include responsive() {
+    flex-direction: column;
+    height: auto;
+  }
 
   .container-item-1 {
     max-width: 576px;
@@ -31,6 +37,11 @@
 .spiderman {
   width: 120%;
   transform: translate3d(-160px, 0, 0);
+
+  @include responsive() {
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .btn {
