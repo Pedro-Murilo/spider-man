@@ -1,4 +1,4 @@
-<h1 align="center">Spider-man: Miles Morales</h1>
+<h1 align="center">🕸 Spider-man: Miles Morales</h1>
 <p align="center"><img width="500px" src="https://github.com/Pedro-Murilo/spider-man/blob/main/img/spider-man.png" alt="Logo" /></p>
 
 ---
